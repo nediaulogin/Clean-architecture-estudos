@@ -1,6 +1,6 @@
 import { CreateProductUsecase } from "./create-product";
-import { ProductGateway } from "../../domain/Product/gateway/product.gateway";
-import { Product } from "../../domain/Product/entity/product";
+import { ProductGateway } from "../../domain/product/gateway/product.gateway";
+import { Product } from "../../domain/product/entity/product";
 import { describe, expect, it, beforeEach, jest } from '@jest/globals';
 
 
@@ -35,6 +35,8 @@ describe("CreateProductUsecase", () => {
     expect(gatewayMock.save).toHaveBeenCalledTimes(1);
 
     const savedProduct = gatewayMock.save.mock.calls[0][0];
+    console.log(savedProduct);
+    console.log(gatewayMock.save.mock.calls);
 
     expect(savedProduct).toBeInstanceOf(Product);
     expect(savedProduct.name).toBe("Notebook");
