@@ -1,4 +1,4 @@
-import { StockMovement } from "../StockMovement/entity/stockMovement";
+import { StockMovement } from "../stockMovement/entity/stockMovement";
 
 export class StockCalculator {
   static calculate(movements: StockMovement[]): number {

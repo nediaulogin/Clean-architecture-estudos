@@ -1,7 +1,7 @@
-import { Product } from "../../domain/Product/entity/product";
-import { ProductGateway } from "../../domain/Product/gateway/product.gateway";
-import { StockMovement } from "../../domain/StockMovement/entity/stockMovement";
-import { StockMovementGateway } from "../../domain/StockMovement/gateway/stockMoviment.gateway";
+import { Product } from "../../domain/product/entity/product";
+import { ProductGateway } from "../../domain/product/gateway/product.gateway";
+import { StockMovement } from "../../domain/stockMovement/entity/stockMovement";
+import { StockMovementGateway } from "../../domain/stockMovement/gateway/stockMoviment.gateway";
 import { Usecase } from "../usecase";
 
 export type IncreaseStockInputDto = {

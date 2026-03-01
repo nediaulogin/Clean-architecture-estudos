@@ -1,5 +1,5 @@
-import { Product } from "../../domain/Product/entity/product";
-import { ProductGateway } from "../../domain/Product/gateway/product.gateway";
+import { Product } from "../../domain/product/entity/product";
+import { ProductGateway } from "../../domain/product/gateway/product.gateway";
 import { Usecase } from "../usecase";
 
 export type CreateProductInputDto = {
