@@ -1,5 +1,5 @@
 import { Product } from "./product";
-import { describe, expect, test, it } from '@jest/globals';
+import { describe, expect, it } from '@jest/globals';
 
 describe("Product Entity", () => {
   it("should create a product with stock zero", () => {

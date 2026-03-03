@@ -9,7 +9,7 @@ describe("CreateProductUsecase", () => {
 
   beforeEach(() => {
     gatewayMock = {
-      save: jest.fn().mockResolvedValue(undefined),
+      save: jest.fn(),
       findById: jest.fn(),
       list: jest.fn(),
       delete: jest.fn(),
@@ -34,9 +34,9 @@ describe("CreateProductUsecase", () => {
 
     expect(gatewayMock.save).toHaveBeenCalledTimes(1);
 
-    const savedProduct = gatewayMock.save.mock.calls[0][0];
-    console.log(savedProduct);
-    console.log(gatewayMock.save.mock.calls);
+    const savedProduct = gatewayMock.save.mock.calls[0]![0];
+    // console.log(savedProduct);
+    // console.log(gatewayMock.save.mock.calls);
 
     expect(savedProduct).toBeInstanceOf(Product);
     expect(savedProduct.name).toBe("Notebook");
